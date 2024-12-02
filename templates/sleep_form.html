@@ -1,32 +1,43 @@
 <html lang="ja">
     <head>
-        <title>fitness-app</title>
+        <title>睡眠の記録</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' >
         <style>
-            h2{
+            h1{
                 margin-top:5%;
+                margin-left:30%;
+            }
+            h2{
                 margin-left:30%;
                 font-size:200%;
             }
+            form{
+                margin-left:32%;
+            }
+            div{
+                margin-top:2%;
+            }
             button{
                 margin-top:2%;
-                margin-left:35%;
-                height:8%;
-                width:15%;
-                font-size:100%;
-                background-color:rgb(60, 60, 181);
             }
         </style>
     </head>
     <body>
         <h1>睡眠の記録</h1>
-        <form action="/sleep/store" method="post">
-            <label for="day">日付</label>
-            <input type="date" name="day"><br>
-            <label for="sleeptime">睡眠時間<label>
-            <input type="time" name="sleeptime"><br>
-            <label for="getuptime">起床時間</label>
-            <input type="time" name="getuptime"><br>
-            <button type="submit">保存する</button>
+        <form  class="form" action="/sleep/store" method="post">
+            <div>
+                <label for="day">日付</label>
+                <input type="date" name="day">
+            </div>
+            <div>
+                <label for="sleeptime">睡眠時間<label>
+                <input type="time" name="sleeptime">
+            </div>
+            <div>
+                <label for="getuptime">起床時間</label>
+                <input type="time" name="getuptime">
+            </div>
+            <button type="submit" class="btn btn-outline-primary">保存する</button>
             <a href='/sleep'>キャンセル</a>
         </form>
         

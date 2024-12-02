@@ -1,0 +1,21 @@
+<html lang="ja">
+    <head>
+        <title>歩数の記録</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' >
+    </head>
+    <body>
+        <h1>歩数の記録</h1>
+    </body>
+    <form class="form" action="/walk/store" method="post">
+        <div>
+            <label for="day">日付</label>
+            <input type="date" name="day">
+        </div>
+        <div>
+            <label for="walknum">歩数</label>
+            <input type="text" name="walknum">
+        </div>
+        <button type="submit" class="btn btn-outline-primary">保存する</button>
+        <a href="/walk">キャンセル</a>
+    </form>
+</html>
